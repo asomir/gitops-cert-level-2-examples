@@ -4,7 +4,7 @@ metadata:
   name: follow-semver02
   namespace: argocd
   annotations:
-    argocd-image-updater.argoproj.io/image-list: ghcr.io/codefresh-contrib/gitops-cert-level-2-examples:~1
+    argocd-image-updater.argoproj.io/image-list: ghcr.io/asomir/gitops-cert-level-2-examples:~1
 spec:
   project: default
 
@@ -12,13 +12,12 @@ spec:
     repoURL: https://github.com/codefresh-contrib/gitops-cert-level-2-examples.git
     targetRevision: HEAD
     path: ./image-updater/example-app/envs/staging/
-   
+
   destination:
     server: https://kubernetes.default.svc
     namespace: staging
 
-  # Sync policy
+  Sync policy
   syncPolicy:
     syncOptions:
-      - CreateNamespace=true  
-   
+    - CreateNamespace=true
