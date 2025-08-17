@@ -100,7 +100,7 @@ spec:
       labels:
         app.kubernetes.io/name: argocd-image-updater
     spec:
-      containers:    
+      containers:
       - args:
           - '--interval'
           - 1m
